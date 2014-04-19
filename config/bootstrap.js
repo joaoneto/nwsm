@@ -12,30 +12,26 @@ require('../lib/modal');
 //   setInterval(Window.listProcesses, 1000);
 // });
 
-var State = require('../lib/state'),
+var inject = function inject() {
+  var args = [].slice.call(arguments),
+      fn = args.pop();
+  fn.inject = args;
+
+  return fn;
+};
+
+var state = require('../lib/state'),
+    Scope = require('../lib/scope'),
     Controller = require('../lib/controller');
 
-
-var teste = new Controller;
-
-teste.sub('before', function () {
-  setTimeout(function () {
-    console.log('subscribe before controller run 1');
-  }, 1000);
+state.add('index', {
+  controller: function index() {
+    this.teste = 'teste';
+    console.log(Object.getOwnPropertyNames(this))
+  },
+  template: 'index'
 });
 
-teste.sub('before', function () {
-  setTimeout(function () {
-    console.log('subscribe before controller run 2');
-  }, 1000);
-});
+// console.log(state.states);
 
-teste.sub('after', function () {
-  console.log('subscribe after controller run 1');
-});
-
-teste.sub('after', function () {
-  console.log('subscribe after controller run 2');
-});
-
-teste.run();
+state.go('index');
