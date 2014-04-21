@@ -26,8 +26,33 @@ var state = require('../lib/state'),
 
 state.add('index', {
   controller: function index() {
-    this.teste = 'teste';
-    console.log(Object.getOwnPropertyNames(this))
+    this.teste = 'ABC';
+
+    var self = this;
+    this.processes = {
+      p1: {
+        name: 'mongodb',
+        cpu: 0.1,
+        mem: 10
+      }
+    };
+
+    setTimeout(function () {
+      self.processes.p1 = {
+        name: 'mongodb',
+        cpu: 0.2,
+        mem: 10
+      };
+      self.processes.p2 = {
+        name: 'redis',
+        cpu: 0.1,
+        mem: 10
+      };
+    }, 3000)
+
+    // this.watch('teste', function (a, b, c) {
+    //   console.log(a, b, c);
+    // });
   },
   template: 'index'
 });
