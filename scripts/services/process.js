@@ -1,15 +1,14 @@
 'use strict';
 
-var fs = window.global.require('fs');
-var path = window.global.require('path');
-var cp = window.global.require('child_process');
-var _ = window.global.require('lodash');
-var usage = window.global.require('usage');
-var async = window.global.require('async');
-// var storage = window.global.require('./storage');
-
 angular.module('app.services.process', [])
+
 .factory('process', function (confProvider) {
+  var fs = window.require('fs');
+  var path = window.require('path');
+  var cp = window.require('child_process');
+  var usage = window.require('usage');
+  // var storage = window.require('./storage');
+
   var services = confProvider.get('services');
 
   return {

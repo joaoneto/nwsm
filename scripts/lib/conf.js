@@ -1,17 +1,14 @@
+'use strict';
+
 angular.module('app.conf', [])
+
 .provider('conf', function () {
   this.conf = {};
 
-  this.$get = function () {
-    var conf = this.conf;
-    return {
-      get: function (key) {
-        return conf[key];
-      },
-      getAll: function () {
-        return conf;
-      }
-    };
+  this.$get = angular.noop;
+
+  this.get = function (key) {
+    return this.conf[key];
   };
 
   this.set = function (key, value) {

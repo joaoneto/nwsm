@@ -1,12 +1,28 @@
 'use strict';
 
-angular.module('app.services', ['app.services.process']);
+// Inport node.js modules
+window._ = window.require('lodash');
+window.async = window.require('async');
 
+// On window close
+require('nw.gui').Window.get()
+.on('close', function() {
+  this.hide(); // Pretend to be closed already
+  console.log("We're closing...");
+  this.close(true);
+});
+
+// App root modules
+angular.module('app.services', ['app.services.process']);
+angular.module('app.setup', ['app.setup.checklist']);
+
+// App module
 angular.module('app', [
   'ui.router',
-  // 'ui.router.stateHelper',
   'app.conf',
-  'app.services'
+  'app.storage',
+  'app.services',
+  'app.setup'
 ])
 
 .controller('AppCtrl', function ($scope, $state) {
@@ -30,35 +46,6 @@ angular.module('app', [
       }
     })
 })
-
-.config(function (confProvider) {
-  confProvider.set('services', [
-    {
-      name: 'mongodb',
-      description: 'Mongo DB',
-      pid: '/data/db/mongod.lock',
-      // pid: '/data/db/mongod.lock',
-      path: '/opt/mongo/bin',
-      bin: 'mongod',
-      params: [
-        '--pidfilepath', '/opt/mongo/mongod.lock'
-      ]
-    },
-    {
-      name: 'redis-server',
-      description: 'Redis Server',
-      pid: '/opt/redis/redis.pid',
-      // pid: '/var/run/redis.pid',
-      path: '/opt/redis/src',
-      bin: 'redis-server',
-      params: [
-        '--dir', '/opt/redis/',
-        '--daemonize', 'yes',
-        '--pidfile', '/opt/redis/redis.pid'
-      ]
-    }
-  ]);
-});
 
 angular.element(document).ready(function () {
   angular.bootstrap(document, ['app']);
