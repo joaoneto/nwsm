@@ -33,23 +33,23 @@ strong {
 
 html {
   font-family: 'RobotoRegular';
-  font-size: 16px;
-  font-weight: 1px;
+  /*font-size: 16px;*/
+  /*font-weight: 1px;*/
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   color: #333333;
-  /*background-color: #EDEDED;*/
+  background: #EDEDED;
 }
 
 /* class styles */
-#container {
-  display: block;
+.left-nav {
+  width: 200px;
 }
 
-#left-nav {
-  width: 200px;
-  color: rgb(118, 118, 118);
+.left-nav li {
+  list-style: none;
+  padding: 4px;
 }
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.setup.checklist', [])
+angular.module('app.install.checklist', [])
 
 .provider('checklist', function (storageProvider) {
   this.$get = angular.noop;

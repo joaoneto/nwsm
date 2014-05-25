@@ -4,7 +4,7 @@
   <title></title>
 
   <!-- vendors styles -->
-  <!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" async> -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" async>
 
   <!-- app styles -->
@@ -12,17 +12,26 @@
 </head>
 <body>
   <!-- main container -->
-  <div id="container" ui-view></div>
+  <ui-view></ui-view>
 
   <!-- vendors scriptis -->
+  <script src="bower_components/async/lib/async.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
   <!-- app scripts -->
-  <script src="scripts/lib/conf.js" async></script>
-  <script src="scripts/lib/storage.js" async></script>
-  <script src="scripts/setup/checklist.js" async></script>
+  <script src="scripts/app/conf.js" async></script>
+  <script src="scripts/app/storage.js" async></script>
+  <script src="scripts/app/app-ctrl.js" async></script>
+
+  <script src="scripts/dashboard/dashboard-ctrl.js" async></script>
+
+  <script src="scripts/install/checklist.js" async></script>
+  <script src="scripts/install/install-ctrl.js" async></script>
+
   <script src="scripts/services/process.js" async></script>
+  <script src="scripts/services/services-ctrl.js" async></script>
 
   <script src="scripts/app.js" async></script>
 </body>

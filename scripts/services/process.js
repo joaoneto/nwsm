@@ -3,11 +3,11 @@
 angular.module('app.services.process', [])
 
 .factory('process', function (confProvider) {
-  var fs = window.require('fs');
-  var path = window.require('path');
-  var cp = window.require('child_process');
-  var usage = window.require('usage');
-  // var storage = window.require('./storage');
+  var fs = require('fs');
+  var path = require('path');
+  var cp = require('child_process');
+  var usage = require('usage');
+  // var storage = require('./storage');
 
   var services = confProvider.get('services');
 
