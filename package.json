@@ -13,8 +13,8 @@
     "toolbar": true,
     "frame": true,
     "position": "center",
-    "width": 800,
-    "height": 600,
+    "width": 640,
+    "height": 200,
     "min_width": 220,
     "min_height": 220
   },

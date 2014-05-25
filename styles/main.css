@@ -44,52 +44,12 @@ body {
 }
 
 /* class styles */
-
-.process {
-  padding: 10px;
-  position: relative;
-  color: #fff;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9e9e9), color-stop(100%,#bbbabb));
+#container {
+  display: block;
 }
 
-.process.up {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00ff00), color-stop(100%,#008000));
+#left-nav {
+  width: 200px;
+  color: rgb(118, 118, 118);
 }
 
-.process.down {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#800000));
-}
-
-.process-actions {
-  right: 10px;
-  top: 20px;
-  position: absolute;
-  text-shadow: none;
-}
-
-.process-actions a {
-  color: rgba(100,100,100,0.2);
-  font-size: 28px;
-}
-
-.process-actions a:hover {
-  color: rgba(100,100,100,1);
-  font-size: 28px;
-}
-
-div.process:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ababab), color-stop(100%,#bbbabb));
-}
-
-.process-name {
-  font-family: 'RobotoBold';
-}
-
-.process-usage-cpu:before {
-  content: 'CPU: ';
-}
-
-.process-usage-mem:before {
-  content: 'Memory: ';
-}

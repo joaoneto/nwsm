@@ -1,0 +1,22 @@
+{
+  "name": "nwsm",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joaoneto/nwsm",
+  "authors": [
+    "João Neto <joaopintoneto@gmail.com>"
+  ],
+  "description": "Node.js Webkit Service Manager",
+  "keywords": [
+    "node-webkit",
+    "services",
+    "manager"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-ui-router": "~0.2.10",
+    "fontawesome": "~4.1.0",
+    "bootstrap": "~3.1.1"
+  }
+}
