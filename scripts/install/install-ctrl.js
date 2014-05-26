@@ -10,8 +10,8 @@ angular.module('app.install.install-ctrl', [])
   $stateProvider
     .state('root.install', {
       url: '/install',
-      templateUrl: 'install.tpl.html',
-      controller: 'SetupCtrl',
+      templateUrl: 'scripts/install/install.tpl.html',
+      controller: 'InstallCtrl',
       onEnter: function () {
         console.log('enter root.install');
       }

@@ -15,7 +15,7 @@ angular.module('app.root', [
   'app.app-ctrl'
 ]);
 
-// service module
+// dashboard module
 angular.module('app.dashboard', [
   'app.dashboard.dashboard-ctrl'
 ]);

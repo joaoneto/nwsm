@@ -1,14 +1,23 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <ul class="left-nav">
+    <div class="left-content">
+      <ul class="nav">
+        <li class="divisor">lalala</li>
         <!-- <li><a ui-sref="settings">Configurações</a></li> -->
-        <li><a ui-sref=".services">Serviços</a></li>
+        <li ng-class="{active: $state.includes('root.dashboard')}">
+          <a ui-sref="root.dashboard"><i class="fa fa-home"></i> Dashboard</a>
+        </li>
+        <li ng-class="{active: $state.includes('root.services')}">
+          <a ui-sref="root.services"><i class="fa fa-cube"></i> Serviços</a>
+        </li>
+        <li ng-class="{active: $state.includes('root.install')}">
+          <a ui-sref="root.install"><i class="fa fa-gears"></i> Install</a>
+        </li>
+        <li class="divisor">lalala</li>
         <!-- <li><a ui-sref="about">Sobre</a></li> -->
       </ul>
     </div>
-    <div class="col-md-8">
-      <ui-view>aaa</ui-view>
+    <div class="right-content">
+      <ui-view></ui-view>
     </div>
   </div>
 </div>

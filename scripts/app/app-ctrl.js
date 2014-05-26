@@ -3,6 +3,7 @@
 angular.module('app.app-ctrl', [])
 
 .controller('AppCtrl', function ($scope, $state) {
+  $scope.$state = $state;
   console.log('AppCtrl called');
 })
 

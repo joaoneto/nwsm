@@ -1,9 +1,9 @@
+@font-face { font-family: 'RobotoBold'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Bold.ttf') format('truetype') }
+@font-face { font-family: 'RobotoBoldItalic'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype') }
+@font-face { font-family: 'RobotoItalic'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Italic.ttf') format('truetype') }
 @font-face { font-family: 'RobotoRegular'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Regular.ttf') format('truetype') }
 @font-face { font-family: 'RobotoThin'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Thin.ttf') format('truetype') }
 @font-face { font-family: 'RobotoThinItalic'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype') }
-@font-face { font-family: 'RobotoBold'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Bold.ttf') format('truetype') }
-@font-face { font-family: 'RobotoItalic'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-Italic.ttf') format('truetype') }
-@font-face { font-family: 'RobotoBoldItalic'; font-weight: normal; font-style: normal; src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype') }
 
 /* other */
 ::selection {
@@ -32,24 +32,84 @@ strong {
 }
 
 html {
-  font-family: 'RobotoRegular';
-  /*font-size: 16px;*/
-  /*font-weight: 1px;*/
   -webkit-font-smoothing: antialiased;
+  font-family: 'RobotoRegular';
+  font-size: 14px;
+  font-weight: 1px;
 }
 
 body {
-  color: #333333;
-  background: #EDEDED;
+  background: #B1B1B1;
+  color: #000000;
+}
+
+html, body {
+  height: 100%;
 }
 
 /* class styles */
-.left-nav {
-  width: 200px;
+.container {
+  min-height: 100%;
+  position: relative;
 }
 
-.left-nav li {
-  list-style: none;
-  padding: 4px;
+.left-content {
+  background: #6A6A6A;
+  border-right: 1px rgba(255, 255, 255, .8) solid;
+  min-height: 100%;
+  position: absolute;
+  width: 240px;
 }
 
+.left-content ul.nav {
+  color: #FFFFFF;
+}
+
+.left-content ul.nav li {
+  line-height: 28px;
+  padding-left: 4px;
+}
+
+.left-content ul.nav li.divisor:not(:first-child) {
+  margin-top: 4px;
+}
+
+.left-content ul.nav li.divisor {
+  font-family: 'RobotoBold';
+  text-shadow: 1px 1px #000000;
+}
+
+.left-content ul.nav li a {
+  color: rgba(255, 255, 255, .8);
+  width: 100%;
+  line-height: 28px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.left-content ul.nav i {
+  line-height: 28px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: inherit;
+  width: 24px;
+}
+
+.left-content ul.nav li.active a,
+.left-content ul.nav li.active i {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgba(51, 51, 51, .5);
+}
+
+.left-content ul.nav li.active {
+  background: linear-gradient(#4E5557, #414344);
+}
+
+.right-content {
+  min-height: 100%;
+  left: 240px;
+  min-width: 528px;
+  position: absolute;
+}
