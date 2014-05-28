@@ -12,12 +12,16 @@
         <li ng-class="{active: $state.includes('root.install')}">
           <a ui-sref="root.install"><i class="fa fa-gears"></i> Install</a>
         </li>
+        <li ng-class="{active: $state.includes('widgets')}">
+          <a ui-sref="widgets"><i class="fa fa-gears"></i> Widgets</a>
+        </li>
         <li class="divisor">lalala</li>
         <!-- <li><a ui-sref="about">Sobre</a></li> -->
       </ul>
     </div>
     <div class="right-content">
       <ui-view></ui-view>
+      {{$state | json}}
     </div>
   </div>
 </div>

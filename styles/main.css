@@ -45,13 +45,62 @@ body {
 
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 /* class styles */
-.container {
+.wg-container {
   min-height: 100%;
+  min-width: 100%;
   position: relative;
+  color: #000000;
+  background: #FFFFFF;
 }
+
+.wg-row {
+  display: table-row;
+  overflow: auto;
+}
+
+.wg-col {
+  display: table-cell;
+  overflow: auto;
+}
+
+.wg-pane {
+  height: 100%;
+  display: table;
+}
+
+.wg-split-pane {
+  background: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .left-content {
   background: #6A6A6A;

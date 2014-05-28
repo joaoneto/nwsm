@@ -32,14 +32,21 @@ angular.module('app.install', [
   'app.install.install-ctrl'
 ]);
 
+// widgets module
+angular.module('app.widgets', [
+  'app.widgets.widgets',
+  'app.widgets.widgets-ctrl'
+]);
+
 // app module
 angular.module('app', [
   'ui.router',
   'app.root',
   'app.dashboard',
   'app.services',
-  'app.install'
-])
+  'app.install',
+  'app.widgets'
+]);
 
 angular.element(document).ready(function () {
   angular.bootstrap(document, ['app']);
